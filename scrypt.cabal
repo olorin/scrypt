@@ -66,3 +66,18 @@ test-suite scrypt-test
         test-framework-quickcheck2 >= 0.2
     ghc-options: -Wall
     ghc-prof-options: -auto-all
+
+benchmark scrypt-bench
+    type: exitcode-stdio-1.0
+    hs-source-dirs: bench
+    main-is: Bench.hs
+    build-depends:
+        scrypt,
+        base == 4.*,
+        bytestring >= 0.9,
+        criterion == 1.1.*,
+        deepseq == 1.3.*,
+        QuickCheck == 2.*,
+        quickcheck-instances == 0.3.*
+    ghc-options: -Wall
+    ghc-prof-options: -auto-all
